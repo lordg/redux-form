@@ -173,6 +173,23 @@ class ContactPage extends React.Component {
 }
 ```
 
+## Special Note on Redux with ImmutableJS
+
+When using immutable to manage the state with redux, be sure to import the correct immutable functions.
+
+In your Form Reducer:
+
+```
+import { reducer as formReducer } from 'redux-form/immutable'
+```
+
+AND in your Form Component:
+
+```
+import { Field, reduxForm } from 'redux-form/immutable'
+```
+
+
 You can now take it from here. We recommend to check out the [examples](http://redux-form.com/6.8.0/examples/). The common next steps could also be:
 * setting the [initial form values](http://redux-form.com/6.8.0/examples/initializeFromState/),
 * implementing the [validation](http://redux-form.com/6.8.0/examples/syncValidation/),
